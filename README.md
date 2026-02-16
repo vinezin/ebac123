@@ -1,13 +1,17 @@
-# EBAC123 - Exercícios EBAC
+# 🚀 Projeto Parceria EBAC - Análise Crédito
 
-Repositório com entregas do curso EBAC (Git, Python, Pandas/Seaborn).
+## 🎯 Problemática
+Prever inadimplência cartões BR (R$40bi perdas/ano). Dataset real 20k registros.
 
-## Módulo 1-2
-- Setup Git + Autenticação Colab
-- Ex2: Análise preços gasolina SP Jul/2021 (CSV, gráfico PNG, código PY)
+## 📊 Coleta
+`dados/credito.csv` (879kB) baixado via wget/curl.
 
-![Gasolina SP](gasolina.png)
+## 🔬 Modelagem
+- **K-Means**: 3 clusters risco (baixo/médio/alto)
+- **Regressão Linear**: R² >0.85
+- Insights: Cluster alto = 45% calote, R$2k renda
 
-Preços médios ~R$6.10. Feito com Pandas/Seaborn.
+## 📈 Impacto
+-25% perdas com priorização cobrança.
 
-Próximos módulos aqui!
+## 💻 Execução
