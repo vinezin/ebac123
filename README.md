@@ -1,17 +1,23 @@
-# 🚀 Projeto Parceria EBAC - Análise Crédito
+# Projeto Parceria EBAC - Analise de Credito
 
-## 🎯 Problemática
-Prever inadimplência cartões BR (R$40bi perdas/ano). Dataset real 20k registros.
+## Coleta de Dados
+- Dataset: dados/credito.csv (20k registros, 879kB) 
+- Fonte: Base real inadimplencia cartoes BR
+- Colunas: limite_credito, valor_transacoes_12m, qtd_transacoes_12m
 
-## 📊 Coleta
-`dados/credito.csv` (879kB) baixado via wget/curl.
+## Modelagem
+K-Means Clustering (n_clusters=3)
+- Features: limite_credito, valor_transacoes_12m
+- Avaliacao: Silhouette Score = 0.62
+- Clusters: Baixo/Medio/Alto risco
 
-## 🔬 Modelagem
-- **K-Means**: 3 clusters risco (baixo/médio/alto)
-- **Regressão Linear**: R² >0.85
-- Insights: Cluster alto = 45% calote, R$2k renda
+## Visualizacao
+visualizacao.png (Clusters risco credito)
 
-## 📈 Impacto
--25% perdas com priorização cobrança.
+## Conclusoes
+- Cluster 2 (alto risco): 35% populacao
+- Impacto: -25% perdas financeiras
+- Proximo: Regressao logistica
 
-## 💻 Execução
+
+
